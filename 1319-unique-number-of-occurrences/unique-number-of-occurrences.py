@@ -7,8 +7,11 @@ class Solution(object):
             else:
                 a[i]=1
         b = list(a.values())
-        c= set(a.values())
-        return len(b) == len(c)
-
+        b.sort()
+        for k in range(len(b)-1):
+            if b[k] == b[k+1]:
+                return False
+        return True
+            
 
         
